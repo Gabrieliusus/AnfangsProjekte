@@ -7,7 +7,7 @@ void tierConsole()
     var myTier = new Tierheim();
     while (besuch)
     {
-        Console.WriteLine("Willst du ein Tier hinzufügen (yes/no)");
+        Console.WriteLine("Willst du ein Tier hinzufügen? (yes/no)");
         string addCatRead = Console.ReadLine();
         if (addCatRead == "yes" || addCatRead == "no")
         {
