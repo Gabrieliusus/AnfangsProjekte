@@ -22,4 +22,4 @@ namespace Vererbung
             return $"Name :{Name}, Farbe: {setColor}, Alter: {setAge}";
         }
     }
-}
+}#
