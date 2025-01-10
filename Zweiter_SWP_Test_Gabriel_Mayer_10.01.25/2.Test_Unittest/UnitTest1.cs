@@ -224,6 +224,7 @@ namespace Zweiter_SWP_Test_Gabriel_Mayer_10._01._25
 
         [Test]
         public void Schule_KlassePasstInRaum_ReturnsCorrectResult()
+
         {
             var schule = new Schule("HTL Dornbirn");
             var raum = new Klassenraum("Raum 101", 50, 2, true);
