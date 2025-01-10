@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace Vererbung
 {
-    class Lebewesen
+    public class Lebewesen
     {
-        public DateTime _Birthdate { get; set; }
-        public Lebewesen(DateTime birthdate)
+        public string Color { get; set; }
+        public string Name { get; set; }
+        public DateTime BirthDate { get; set; }
+        public int Age { get { return (DateTime.Now.Year - BirthDate.Year); } }
+        public Lebewesen(DateTime birthDate, string color, string name)
         {
-            _Birthdate = birthdate;
-        }   
+            Color = color;
+            BirthDate = birthDate;
+            Name = name;
+        }
     }
 }
