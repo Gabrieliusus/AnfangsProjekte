@@ -23,3 +23,4 @@ namespace Zweiter_SWP_Test_Gabriel_Mayer_10._01._25
             $"{Name}, {Geschlecht}, Geboren: {Geburtsdatum.ToShortDateString()}";
     }
 }
+
