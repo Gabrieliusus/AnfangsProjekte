@@ -3,26 +3,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Vererbung;
 namespace Vererbung
 {
-    class Tierheim
+    public class Tierheim
     {
-        public List<Cat> tiere = new List<Cat>();
-
-        public void AddAnimal(Cat cat)
+        public List<Animal> tiere = new List<Animal>();
+        public void AddAnimal(Animal animal)
         {
-            tiere.Add(cat);
-            Console.WriteLine($"\nEs wurde die neue Katze {cat.Name} hinzugefügt!\n");
+            tiere.Add(animal);
+            Console.WriteLine($"\nEs wurde neues {animal.TierTyp} {animal} hinzugefügt!\n");
         }
-
         public void ShowAnimals()
         {
             int index = 1;
-            foreach (var cat in tiere)
+            foreach (var tier in tiere)
             {
-                Console.WriteLine(cat);
+                Console.WriteLine(tier);
             }
         }
+        public int NumberOfCats
+        {
+            get { return tiere.Where(a => a.GetType() == typeof(Cat)).Count(); }
+        }
+
+        public int NumberOfDogs
+        {
+            get { return tiere.Where(a => a.GetType() == typeof(Dog)).Count(); }
+        }
+        public int NumberOfAnimals
+        {
+            get
+            {
+                return tiere.Count;
+            }
+        }
+
+        public float AvgAge
+        {
+            get
+            {
+                int age = 0;
+                foreach (var tier in tiere)
+                {
+                    age += tier.Age;
+                }
+                float durchschnittsAlter = (float)age / (float)NumberOfAnimals;
+                return durchschnittsAlter;
+
+            }
+        }
+
+
     }
 }
