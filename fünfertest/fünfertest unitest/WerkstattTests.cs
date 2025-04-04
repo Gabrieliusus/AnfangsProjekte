@@ -77,4 +77,18 @@ public class WerkstattTests
 
         Assert.AreEqual(1, werkstatt.AnzahlAutosInWerkstatt());
     }
+    [Test]
+    public void AutoAusWerkstattNehmen_AutonichtinWerkstatt()
+    {
+        var werkstatt = new Werkstatt();
+        var auto1 = new Auto(5, new DateTime(2020, 1, 1), 220, "Benzin");
+        werkstatt.AutoAusWerkstattNehmen(auto1);
+    }
+    [Test]
+    public void AutoAlterinMonaten_Autoist()
+    {
+        var auto1 = new Auto(5, new DateTime(2020, 1, 1), 220, "Benzin");
+        var alterinMonaten = auto1.AlterInMonaten();
+        Assert.That(alterinMonaten == 60);
+    }
 }

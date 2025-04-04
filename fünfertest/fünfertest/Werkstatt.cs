@@ -4,7 +4,7 @@ using System.Linq;
 
 public class Werkstatt
 {
-    public List<Auto> autosInWerkstatt;
+    private List<Auto> autosInWerkstatt;
 
     public Werkstatt()
     {
@@ -12,7 +12,7 @@ public class Werkstatt
     }
 
 
-    public void AutoInWerkstattStellen(Auto auto)
+    public void AutoInWerkstattStellen(Auto? auto)
     {
         if (auto == null)
         {
