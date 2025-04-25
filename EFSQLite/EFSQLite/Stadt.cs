@@ -4,6 +4,6 @@ public class Stadt
 {
     public int Id { get; set; }
     public string Name { get; set; }
-
+    public string PLZ { get; set; }
     public List<Person> Personen { get; set; } = new();
 }
